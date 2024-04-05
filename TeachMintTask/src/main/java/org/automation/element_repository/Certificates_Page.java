@@ -9,19 +9,37 @@ public class Certificates_Page {
 
 	
 	
-	@FindBy(xpath = "//div[contains(@class,'Cards_templateImageContainer__2UfJm')]/../../../..//h6[text()='Default templates - 7']")
+//	@FindBy(xpath = "//div[contains(@class,'Cards_templateImageContainer__2UfJm')]/../../../..//h6[text()='Default templates - 7']")
+//	public WebElement schoolLivingCertificate;
+	
+	@FindBy(xpath = "//div[@class='Cards_cardDetails__WsZ-E'and contains(.,'School leaving certificate')]")
 	public WebElement schoolLivingCertificate;
 	
+	@FindBy(xpath = "//div[.='Generate']")
+	public WebElement slcGenerate;
+	
 	public Certificates_Page(WebDriver driver) {
-		PageFactory.initElements(driver, this);	
+		PageFactory.initElements(driver, this);
 	}
 
 	public WebElement getSchoolLivingCertificate() {
 		return schoolLivingCertificate;
 	}
 
-	public void setSchoolLivingCertificate(WebElement schoolLivingCertificate) {
-		this.schoolLivingCertificate = schoolLivingCertificate;
+	public WebElement getSlcGenerate() {
+		return slcGenerate;
+	}
+
+	public void setSlcGenerate(WebElement slcGenerate) {
+		this.slcGenerate = slcGenerate;
 	}
 	
+	
+	public void certificate() throws InterruptedException {
+		getSchoolLivingCertificate().click();
+		getSlcGenerate().click();
+		Thread.sleep(2000);
+		getSlcGenerate().click();
+	}
+
 }

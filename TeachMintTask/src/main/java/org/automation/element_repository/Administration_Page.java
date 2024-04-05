@@ -1,6 +1,5 @@
 package org.automation.element_repository;
 
-import org.automation.base.Base_Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

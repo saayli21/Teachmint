@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Reporter;
 
 public class Login_Page {
 	@FindBy(id = "user-input")
@@ -35,6 +36,7 @@ public class Login_Page {
 			allOtp.get(i).sendKeys(Character.toString(otp.charAt(i)));
 		}
 		submitOTPButton.click();
+		Reporter.log("Successfully Login",true);
 	}
 
 }

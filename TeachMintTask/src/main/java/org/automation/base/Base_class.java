@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.automation.generic_utilities.Java_Utility;
 import org.automation.generic_utilities.WebDriver_Utility;
+import org.junit.AfterClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
@@ -15,13 +16,18 @@ public class Base_class {
 	public WebDriver driver;
 
 	@BeforeClass
-	public void config_BC() {
+	public void config_BC() throws IOException {
 		driver = new ChromeDriver();
 		webUtil.maximize(driver);
 		webUtil.waitForImplicitly(driver);
-	}
-	@BeforeMethod
-	public void config_BM() throws IOException {
 		webUtil.accessApplication(driver, javaUtil.getdata("Base_URL"));
+	}
+//	@BeforeMethod
+//	public void config_BM() throws IOException {
+//		webUtil.accessApplication(driver, javaUtil.getdata("Base_URL"));
+//	}
+	@AfterClass
+	public void config_AM() {
+		driver.quit();
 	}
 }

@@ -5,9 +5,12 @@
     <classes>
       <class name="Teachmint.LoginTest">
         <methods>
-          <include name="config_BM"/>
+          <include name="adminstTest"/>
+          <include name="selectAccountTest"/>
           <include name="config_BC"/>
           <include name="loginTest"/>
+          <include name="certificateTest"/>
+          <include name="enterDetailsValidateTest"/>
         </methods>
       </class> <!-- Teachmint.LoginTest -->
     </classes>

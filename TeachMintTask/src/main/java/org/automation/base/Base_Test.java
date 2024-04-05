@@ -9,7 +9,7 @@ public class Base_Test {
 	public WebDriver driver;
 
 	public Base_Test(WebDriver driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);    //to avoid stale ele 
 		this.driver = driver;
 	}
 	
