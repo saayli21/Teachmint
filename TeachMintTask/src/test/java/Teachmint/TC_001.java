@@ -23,8 +23,6 @@ public class TC_001 extends Base_class {
 	public void selectAccountTest() throws InterruptedException, AWTException {
 		SelectAccountPage sel=new SelectAccountPage(driver);
 		sel.selectAccount(driver, webUtil);
-		Thread.sleep(2000);
-		javaUtil.refreshPage();
 	}
 	@Test(dependsOnMethods = "selectAccountTest")
 	public void adminstTest() {

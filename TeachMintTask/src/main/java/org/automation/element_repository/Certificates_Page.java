@@ -15,7 +15,7 @@ public class Certificates_Page {
 	@FindBy(xpath = "//div[@class='Cards_cardDetails__WsZ-E'and contains(.,'School leaving certificate')]")
 	public WebElement schoolLivingCertificate;
 	
-	@FindBy(xpath = "//div[.='Generate']")
+	@FindBy(xpath = "//div[text()='Generate']")
 	public WebElement slcGenerate;
 	
 	public Certificates_Page(WebDriver driver) {

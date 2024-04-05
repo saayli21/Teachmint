@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Teachmint.LoginTest">
+      <class name="Teachmint.TC_001">
         <methods>
-          <include name="adminstTest"/>
           <include name="selectAccountTest"/>
-          <include name="config_BC"/>
-          <include name="loginTest"/>
           <include name="certificateTest"/>
           <include name="enterDetailsValidateTest"/>
+          <include name="config_BC"/>
+          <include name="loginTest"/>
+          <include name="adminstTest"/>
         </methods>
-      </class> <!-- Teachmint.LoginTest -->
+      </class> <!-- Teachmint.TC_001 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
