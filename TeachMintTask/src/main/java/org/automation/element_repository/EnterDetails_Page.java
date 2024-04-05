@@ -27,8 +27,9 @@ public class EnterDetails_Page {
 	}
 	
 	public void enterDetailsValidate(WebDriver driver,String expMsg,WebDriver_Utility webutility) throws InterruptedException {
-		Thread.sleep(2500);
+		Thread.sleep(3000);
 		remarksTextField.sendKeys("Update");
+		Thread.sleep(2000);
 		generateButton.click();
 		Assert.assertEquals(confirmMsg.getText(), expMsg);
 		Reporter.log("Document generated successfully",true);

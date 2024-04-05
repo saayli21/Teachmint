@@ -27,13 +27,13 @@ public class Login_Page {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void loginApplication(WebDriver driver,Java_Utility utility,WebDriver_Utility webUtility) throws IOException {
+	public void loginApplication(WebDriver driver,Java_Utility utility,WebDriver_Utility webUtility) throws IOException, InterruptedException {
 		webUtility.waitForExplicityWait(mobileNumber, driver);
 		
 		mobileNumber.sendKeys("11111111111111");
 		mobileNumber.clear();
 		//webUtility.waitForExplicityWait(mobileNumber,driver);  //next btn 
-		
+		Thread.sleep(2000);
 
 		mobileNumber.sendKeys(utility.getdata("MobileNumber"));
 		
